@@ -12,7 +12,7 @@ package com.example.cloudprojectcollection.result;
  *
  *         "data": null,             结果集(出现异常,结果集为空)
  *
- *         "code": 500,            状态码
+ *         "code": "500",            状态码
  *
  *         "message": ""          状态码的描述
  *
@@ -27,7 +27,7 @@ public class CommonResult<T> {
     /**
      * 状态码
      */
-    private Integer code;
+    private String code;
 
     /**
      * 状态码描述
@@ -36,12 +36,12 @@ public class CommonResult<T> {
 
     public CommonResult() {}
 
-    public CommonResult(Integer code, String message) {
+    public CommonResult(String code, String message) {
         this.code = code;
         this.message = message;
     }
 
-    protected CommonResult(Integer code, String message, T data) {
+    public CommonResult(String code, String message, T data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -87,7 +87,7 @@ public class CommonResult<T> {
      * @param errorCode 错误码
      * @param message 错误信息
      */
-    public static <T> CommonResult<T> failed(Integer errorCode, String message) {
+    public static <T> CommonResult<T> failed(String errorCode, String message) {
         return new CommonResult<T>(errorCode, message, null);
     }
 
@@ -128,11 +128,11 @@ public class CommonResult<T> {
         return new CommonResult<T>(ExceptionCode.FAILED.getCode(), ExceptionCode.FAILED.getMessage(), data);
     }
 
-    public Integer getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(Integer code) {
+    public void setCode(String code) {
         this.code = code;
     }
 

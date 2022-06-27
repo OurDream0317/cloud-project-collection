@@ -6,21 +6,23 @@ package com.example.cloudprojectcollection.result;
  * @desc:
  **/
 public class ExceptionCode {
-    public static final ExceptionCode SUCCESS = new ExceptionCode(200, "操作成功");
-    public static final ExceptionCode FAILED = new ExceptionCode(500, "系统异常");
+    public static final ExceptionCode SUCCESS = new ExceptionCode("200", "操作成功");
+    public static final ExceptionCode FAILED = new ExceptionCode("500", "系统异常");
+    public static final ExceptionCode JSON_TRANS_FAILED = new ExceptionCode("10000", "json格式解析异常");
+    public static final ExceptionCode SERVICE_INVOCATION_FAILED = new ExceptionCode("10001", "服务调用异常");
 
-    private int code;
+    private String code;
     private String message;
 
-    public ExceptionCode(int code, String message) {
+    public ExceptionCode(String code, String message) {
         this.code = code;
         this.message= message;
     }
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
