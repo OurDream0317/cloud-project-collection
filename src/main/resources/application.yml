@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: cloud-project-collection
+  profiles:
+    active: dev
+logging:
+  config: classpath:log4j2-spring.yml
+
