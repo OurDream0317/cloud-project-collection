@@ -3,6 +3,16 @@ spring:
     name: cloud-project-collection
   profiles:
     active: dev
+
+# mybatis配置
+mybatis:
+  # 配置SQL映射文件路径
+  # mapper-locations: classpath:/mapper/*.xml
+  mapper-locations: classpath:mapper/**/*.xml
+  # 驼峰命名
+  configuration:
+    mapUnderscoreToCamelCase: true
+
 logging:
   config: classpath:log4j2-spring.xml
 

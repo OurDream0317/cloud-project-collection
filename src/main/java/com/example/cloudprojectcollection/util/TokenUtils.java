@@ -53,6 +53,12 @@ public class TokenUtils {
         System.out.println("claims = " + claims.toString());
     }
 
+    /**
+     * (二)
+     * RSA的基本原理有两点：
+     * 私钥加密，持有私钥或公钥才可以解密
+     * 公钥加密，持有私钥才可解密
+     */
 
 
 }
