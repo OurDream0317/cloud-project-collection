@@ -86,7 +86,7 @@ public class LambdaTest {
 
         Account account2 = new Account();
         account2.setId("11");
-        account2.setName("xww1");
+        account2.setName("wwx");
         demoList.add(account2);
         // 集合转map，key为id，value为元素本身。
         // 有重复value值取k1（基本上key为主键value本身不会重复）
