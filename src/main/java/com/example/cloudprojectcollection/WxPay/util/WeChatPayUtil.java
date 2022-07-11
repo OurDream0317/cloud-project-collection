@@ -47,7 +47,7 @@ public class WeChatPayUtil {
         map.put("total_fee", miniDTO.getTotalFee());
         //支持IPV4和IPV6两种格式的IP地址。调用微信支付API的机器IP
         map.put("spbill_create_ip", getLocalIp());
-        //交易类型  小程序用JSAPI
+        //交易类型  JSAPI--JSAPI支付（或小程序支付）、NATIVE--Native支付、APP--app支付，MWEB--H5支付，不同trade_type决定了调起支付的方式
         map.put("trade_type", "JSAPI");
         //回调地址  异步接收微信支付结果通知的回调地址，通知url必须为外网可访问的url，不能携带参数
         map.put("notify_url", "https://wx.zschool.com/anon/weChatPay/notify");
