@@ -1,7 +1,11 @@
 package com.example.cloudprojectcollection.controller;
 
+import com.example.cloudprojectcollection.service.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @Author: Wwx
@@ -11,11 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@RequestMapping("test")
 public class HelloWord {
 
+    @Autowired
+    private TestService testService;
+
     @RequestMapping("/hello")
-    public String hello() {
-        return "hello word";
+    public List hello() {
+        System.out.println("------------------------");
+        return testService.queryList();
     }
 
 }

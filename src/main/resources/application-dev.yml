@@ -2,12 +2,29 @@ server:
   port: 2201
 
 spring:
-  # 数据源配置
+  cache:
+    type: generic
+
   datasource:
-    url: jdbc:mysql://localhost:3306/sg_security?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    db1: # 数据源1
+      jdbc-url: jdbc:mysql://localhost:3306/sakila?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=GMT%2B8
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    db2: # 数据源2
+      jdbc-url: jdbc:mysql://localhost:3306/world?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=GMT%2B8
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  durid:
+    initial-size: 1
+    max-active: 20
+    min-idle: 1
+    max-wait: 60000
+autoconfigure:
+  exclude:  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure # 去除druid配置
+
+
     # redis配置
   redis:
     host: localhost

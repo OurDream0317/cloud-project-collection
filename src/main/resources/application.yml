@@ -8,7 +8,7 @@ spring:
 mybatis:
   # 配置SQL映射文件路径
   # mapper-locations: classpath:/mapper/*.xml
-  mapper-locations:  classpath:mapper/**/*.xml
+  mapper-locations: classpath:mapper/**/*.xml
   # 驼峰命名
   configuration:
     mapUnderscoreToCamelCase: true
