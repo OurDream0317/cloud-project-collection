@@ -27,5 +27,12 @@ public class HelloWord {
         return testService.queryList();
     }
 
+
+    @RequestMapping("/getTree")
+    public List getTree() {
+        System.out.println("------------------------");
+        return testService.getTree();
+    }
+
 }
 
