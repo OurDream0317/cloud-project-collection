@@ -79,14 +79,14 @@ public class OptionTest {
         TreeSet<Integer> set = new TreeSet();
         TreeSet<Integer> set1 = new TreeSet();
         while (true){
-            set.add((int) (1 + Math.random() * (35)));
-            if (set.size()==5){
+            set.add((int) (1 + Math.random() * (33)));
+            if (set.size()==6){
                 break;
             }
         }
         while (true){
-            set1.add((int) (1 + Math.random() * (12)));
-            if (set1.size()==2){
+            set1.add((int) (1 + Math.random() * (16)));
+            if (set1.size()==1){
                 break;
             }
         }
