@@ -40,7 +40,3 @@ autoconfigure:
 
     # 连接超时时间
     timeout: 30000
-
-  data:
-    solr:
-      host: http://127.0.0.1:8983/solr
