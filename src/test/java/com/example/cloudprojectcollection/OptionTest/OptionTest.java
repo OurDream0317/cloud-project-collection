@@ -4,6 +4,7 @@ import com.google.common.base.Strings;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -23,7 +24,7 @@ public class OptionTest {
         A a = new A();
         A.B b = new A.B();
        // Assert.isNull(b, "用户名不允许为空！");
-        Assert.hasLength("","不允许为空！！！！");
+        Assert.hasLength("111","不允许为空！！！！");
     }
     @Test
     public void m2() {
@@ -73,20 +74,26 @@ public class OptionTest {
         }
         return idNumber;
     }
+
+    @Test
+    public void mmmm(){
+        System.out.println("01".contains("0"));
+    }
+
     @Test
     public void m4() {
         System.out.println("----------大乐透机选开始------------");
         TreeSet<Integer> set = new TreeSet();
         TreeSet<Integer> set1 = new TreeSet();
         while (true){
-            set.add((int) (1 + Math.random() * (33)));
-            if (set.size()==6){
+            set.add((int) (1 + Math.random() * (35)));
+            if (set.size()==5){
                 break;
             }
         }
         while (true){
-            set1.add((int) (1 + Math.random() * (16)));
-            if (set1.size()==1){
+            set1.add((int) (1 + Math.random() * (12)));
+            if (set1.size()==2){
                 break;
             }
         }

@@ -12,6 +12,15 @@ import lombok.Data;
 public class A {
     private Integer id;
     private String desc;
+
+    public A() {
+    }
+
+    public A(Integer id, String desc) {
+        this.id = id;
+        this.desc = desc;
+    }
+
     public static class B{
         public Integer id;
         public String desc;
